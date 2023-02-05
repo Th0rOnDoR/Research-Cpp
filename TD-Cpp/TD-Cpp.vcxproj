@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c9a572ec-a701-4372-a66a-d88e5044d6e1}</ProjectGuid>
-    <RootNamespace>ResearchCpp</RootNamespace>
+    <ProjectGuid>{49be7b2f-5660-4e84-b0ff-ce0af50ada65}</ProjectGuid>
+    <RootNamespace>TDCpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,8 +128,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Research-Cpp.cpp" />
-    <ClCompile Include="Integrals.cpp" />
+    <ClCompile Include="Boucles.cpp" />
+    <ClCompile Include="Imperative.cpp" />
+    <ClCompile Include="Strings.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
