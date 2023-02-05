@@ -1,3 +1,0 @@
-﻿  Source.cpp
-Source.obj : error LNK2019: unresolved external symbol "public: static int __cdecl TD::TD_Boucles::Addition(int,int)" (?Addition@TD_Boucles@TD@@SAHHH@Z) referenced in function main
-C:\Users\thom0\Documents\git\TD-Cpp\x64\Debug\TD-Cpp.exe : fatal error LNK1120: 1 unresolved externals
