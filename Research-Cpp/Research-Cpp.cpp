@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Header.h";
+#include "Integrals.cpp"
+#include "Symmetric Tree.cpp"
 
 using namespace ResearchCpp;
 
@@ -9,5 +11,5 @@ int main()
 {
 	std::cout << "Hello World!\n";
 	
-	std::cout << integral(1,1,f);
+	std::cout << integral(1,1,f,100);
 }

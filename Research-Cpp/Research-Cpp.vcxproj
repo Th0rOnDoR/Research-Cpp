@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Research-Cpp.cpp" />
     <ClCompile Include="Integrals.cpp" />
+    <ClCompile Include="Symmetric Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />

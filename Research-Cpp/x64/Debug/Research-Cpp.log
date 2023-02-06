@@ -1,5 +1,5 @@
 ﻿  Research-Cpp.cpp
-C:\Users\thom0\Documents\git\Research-Cpp\Research-Cpp\Research-Cpp.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  Integrals.cpp
+C:\Users\thom0\Documents\git\Research-Cpp\Research-Cpp\Research-Cpp.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Symmetric Tree.cpp
   Generating Code...
   Research-Cpp.vcxproj -> C:\Users\thom0\Documents\git\Research-Cpp\x64\Debug\Research-Cpp.exe

@@ -21,6 +21,9 @@
     <ClCompile Include="Integrals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Symmetric Tree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
