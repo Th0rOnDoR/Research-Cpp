@@ -17,4 +17,13 @@ namespace ResearchCpp {
 		}
 		return result;
 	}
+
+	static Polynomial Derivee(Polynomial p) {
+		if (p.degree <= 0) { return Polynomial(); }
+		Polynomial result = Polynomial(p.degree*p.coef, p.degree-1);
+		if (p.next) {
+			result.next = &(Derivee(*p.next));
+		}
+		return result;
+	}
 }

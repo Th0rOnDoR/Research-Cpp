@@ -13,8 +13,17 @@ namespace ResearchCpp {
 		TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 
 	};
+	struct Polynomial {
+		int coef;
+		int degree;
+		Polynomial* next;
+		Polynomial() : coef(0), degree(0), next(nullptr) {}
+		Polynomial(int coefficient, int degree) : coef(coefficient), degree(degree), next(nullptr) {}
+		Polynomial(int coefficient, int degree, Polynomial* next) : coef(coefficient), degree(degree), next(next) {}
+
+	};
 
 	static double integral(double, double, std::function<double(double)>, int k);
 	static bool isSymmetric(TreeNode* root);
-	static int lengthOfLIS(std::vector<int>& nums);
+	static Polynomial Derivee(Polynomial);
 }
