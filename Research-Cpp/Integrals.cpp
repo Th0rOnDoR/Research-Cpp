@@ -3,24 +3,6 @@
 
 namespace ResearchCpp {
 
-
-	static double integral(double x1, double x2, std::function<double(double)> f, int k) {
-		double result = 0;
-		double pas = (x2 - x1) / k;
-		for (int i = 0; x1 + i*pas < x2; i++) {
-			double t = f(x1 + i * pas);
-			result += t;
-			/*
-			if (t < 0) {
-				result -= random(x1 + i * pas, pas, t, f, k);
-			}
-			else {
-				result += random(x1 + i * pas, pas, t, f, k);
-			} */
-		}
-		return result;
-	}
-
 	static double pow(double x, int p) {
 		if (p == 1) { return x; }
 		if (p % 2 == 0) {
@@ -53,6 +35,23 @@ namespace ResearchCpp {
 		if (p.next) {
 			Polynomial tmp = Primitive(*p.next);
 			result.next = &tmp;
+		}
+		return result;
+	}
+
+	static double integral(double x1, double x2, std::function<double(double)> f, int k) {
+		double result = 0;
+		double pas = (x2 - x1) / k;
+		for (int i = 0; x1 + i * pas < x2; i++) {
+			double t = f(x1 + i * pas);
+			result += t;
+			/*
+			if (t < 0) {
+				result -= random(x1 + i * pas, pas, t, f, k);
+			}
+			else {
+				result += random(x1 + i * pas, pas, t, f, k);
+			} */
 		}
 		return result;
 	}

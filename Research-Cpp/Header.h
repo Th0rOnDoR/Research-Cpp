@@ -11,7 +11,6 @@ namespace ResearchCpp {
 		TreeNode() : val(0), left(nullptr), right(nullptr) {}
 		TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 		TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
-
 	};
 	struct Polynomial {
 		double coef;
@@ -21,11 +20,26 @@ namespace ResearchCpp {
 		Polynomial(double coefficient, int degree) : coef(coefficient), degree(degree), next(nullptr) {}
 		Polynomial(double coefficient, int degree, Polynomial* next) : coef(coefficient), degree(degree), next(next) {}
 	};
+	struct Element {
+		int val;
+		Element* next;
+		Element() : val(0), next(nullptr) {}
+		Element(int val) : val(val), next(nullptr) {}
+		Element(Element* next) : val(0), next(next) {}
+		Element(int val, Element* next) : val(val), next(next) {}
+	};
 
-	static double integral(double, double, std::function<double(double)>, int k);
+	struct List {
+		Element head;
+		int size;
+		List() : head(Element()), size(1) {}
+		List(Element head) : head(head), size (1) {}
+	};
+
 	static bool isSymmetric(TreeNode* root);
 	static double Val_Polynomial(double, Polynomial);
 	static Polynomial Derivee(Polynomial);
 	static Polynomial Primitive(Polynomial);
+	static double integral(double, double, std::function<double(double)>, int k);
 	static double integral(double, double, Polynomial);
 }
