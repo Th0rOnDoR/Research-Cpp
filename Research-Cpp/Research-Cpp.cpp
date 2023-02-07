@@ -11,5 +11,5 @@ int main()
 {
 	std::cout << "Hello World!\n";
 	
-	std::cout << integral(1,1,f,100);
+	std::cout << integral(1,10,f,100);
 }

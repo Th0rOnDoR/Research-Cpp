@@ -14,16 +14,18 @@ namespace ResearchCpp {
 
 	};
 	struct Polynomial {
-		int coef;
+		double coef;
 		int degree;
 		Polynomial* next;
 		Polynomial() : coef(0), degree(0), next(nullptr) {}
-		Polynomial(int coefficient, int degree) : coef(coefficient), degree(degree), next(nullptr) {}
-		Polynomial(int coefficient, int degree, Polynomial* next) : coef(coefficient), degree(degree), next(next) {}
-
+		Polynomial(double coefficient, int degree) : coef(coefficient), degree(degree), next(nullptr) {}
+		Polynomial(double coefficient, int degree, Polynomial* next) : coef(coefficient), degree(degree), next(next) {}
 	};
 
 	static double integral(double, double, std::function<double(double)>, int k);
 	static bool isSymmetric(TreeNode* root);
+	static double Val_Polynomial(double, Polynomial);
 	static Polynomial Derivee(Polynomial);
+	static Polynomial Primitive(Polynomial);
+	static double integral(double, double, Polynomial);
 }
