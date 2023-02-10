@@ -9,7 +9,7 @@ namespace ResearchCpp {
 		if (!r || !l) {
 			return false;
 		}
-		if (r->val == l->val) {
+		if (r->key == l->key) {
 			return _IsSymmetric(r->right, l->left) && _IsSymmetric(r->left, l->right);
 		}
 		return false;
