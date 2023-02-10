@@ -6,10 +6,12 @@
 using namespace ResearchCpp;
 
 
+
 double f(double x) { return x; }
 int main()
 {
 	std::cout << "Hello World!\n";
-	
-	std::cout << integral(1,10,f,100);
+	int b = 15;
+	int* a = &b;
+	int c = *a; 
 }

@@ -47,7 +47,7 @@ namespace ResearchCpp {
 			result += t;
 			/*
 			if (t < 0) {
-				result -= random(x1 + i * pas, pas, t, f, k);
+				result -= (random)(x1 + i * pas, pas, t, f, k);
 			}
 			else {
 				result += random(x1 + i * pas, pas, t, f, k);
@@ -65,4 +65,5 @@ namespace ResearchCpp {
 		}
 		return Val_Polynomial(x1, prim) - Val_Polynomial(x2, prim);
 	}
+
 }

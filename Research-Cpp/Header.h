@@ -28,7 +28,6 @@ namespace ResearchCpp {
 		Element(Element* next) : val(0), next(next) {}
 		Element(int val, Element* next) : val(val), next(next) {}
 	};
-
 	struct List {
 		Element head;
 		int size;
