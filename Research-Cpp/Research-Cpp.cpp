@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Header.h";
+#include "Maths.h";
 #include "Integrals.cpp"
 #include "Symmetric Tree.cpp"
 
@@ -11,7 +11,8 @@ double f(double x) { return x; }
 int main()
 {
 	std::cout << "Hello World!\n";
-	int b = 15;
-	int* a = &b;
-	int c = *a; 
+	int tmp[2];
+	tmp[0] = 0;
+	tmp[1] = 1;
+	tmp[2] = 15;
 }
