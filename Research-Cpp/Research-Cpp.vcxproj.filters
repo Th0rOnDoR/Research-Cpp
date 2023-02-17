@@ -24,13 +24,19 @@
     <ClCompile Include="Symmetric Tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="numbers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Maths.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Test.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Trees.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

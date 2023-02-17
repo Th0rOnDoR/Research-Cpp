@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Maths.h";
-#include "Integrals.cpp"
-#include "Symmetric Tree.cpp"
+#include "Trees.h";
+#include "Test.h";
 
 using namespace ResearchCpp;
 
@@ -11,8 +11,8 @@ double f(double x) { return x; }
 int main()
 {
 	std::cout << "Hello World!\n";
-	int tmp[2];
-	tmp[0] = 0;
-	tmp[1] = 1;
-	tmp[2] = 15;
+
+	if (!NULL) { //this, is true.
+		std::cout << "Hello World!\n";
+	}
 }

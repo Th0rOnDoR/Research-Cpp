@@ -5,14 +5,6 @@
 
 namespace ResearchCpp {
 
-	struct TreeNode {
-		int key;
-		TreeNode* left;
-		TreeNode* right;
-		TreeNode() : key(0), left(nullptr), right(nullptr) {}
-		TreeNode(int x) : key(x), left(nullptr), right(nullptr) {}
-		TreeNode(int x, TreeNode* left, TreeNode* right) : key(x), left(left), right(right) {}
-	};
 	struct Polynomial {
 		double coef;
 		int degree;
@@ -21,25 +13,45 @@ namespace ResearchCpp {
 		Polynomial(double coefficient, int degree) : coef(coefficient), degree(degree), next(nullptr) {}
 		Polynomial(double coefficient, int degree, Polynomial* next) : coef(coefficient), degree(degree), next(next) {}
 	};
+	template <typename type>
 	struct Element {
-		int val;
+		type val;
 		Element* next;
 		Element() : val(0), next(nullptr) {}
 		Element(int val) : val(val), next(nullptr) {}
 		Element(Element* next) : val(0), next(next) {}
 		Element(int val, Element* next) : val(val), next(next) {}
 	};
+	template <typename type>
 	struct List {
-		Element head;
-		int size;
-		List() : head(Element()), size(1) {}
-		List(Element head) : head(head), size (1) {}
+		Element<type> head;
+		List() : head(Element<type>()) {}
+		List(Element<type> head) : head(head){}
+		Append(Element<type> toadd) {
+			if (!head) {
+				head = toadd;
+			}
+			Element<type> tmp = head;
+			while (tmp.next) {
+				tmp = tmp.next;
+			}
+			tmp.next = toadd;
+		}
 	};
-
-	static bool isSymmetric(TreeNode* root);
+	template <typename type1, typename type2>
+	struct Couple {
+		type1 key;
+		type2 val;
+		Couple() : key(NULL), val(NULL) {}
+		Couple(type1 key) : key(key), val(NULL) {}
+		Couple(type1 key, type2 val) : key(key), val(val) {}
+	};
 	static double Val_Polynomial(double, Polynomial);
 	static Polynomial Derivee(Polynomial);
 	static Polynomial Primitive(Polynomial);
 	static double integral(double, double, std::function<double(double)>, int k);
 	static double integral(double, double, Polynomial);
+	
+	//numbers.cpp for already implemented types
+	static bool max(int, int);
 }
