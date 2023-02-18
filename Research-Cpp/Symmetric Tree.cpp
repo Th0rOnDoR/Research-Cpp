@@ -3,6 +3,7 @@
 #include "Maths.h"
 #include <string>;
 #include <queue>;
+#include "numbers.cpp";
 
 namespace ResearchCpp {
 	
@@ -44,12 +45,15 @@ namespace ResearchCpp {
 		}
 		return _IsSymmetric(this->right, this->left);
 	}
-	List<Couple<int, int>> TreeNode::toList() {
+	List<Couple<int, int>> TreeNode::ToList(int p) {
 		if (!this) {
-
+			return List<Couple<int, int>>();
 		}
-	}
+		else {}
+		
 
+	}
+	
 	List<int> get_average(TreeNode* B) {
 		List<int> result;
 		if (B) {
@@ -77,8 +81,22 @@ namespace ResearchCpp {
 					counter = 0;
 				}
 			}
-			return result;
 		}
+		return result;
+	}
+	
+	int search_hier(TreeNode* B, int i, int pos = 0) {
+		if (!B) {
+			return NULL;
+		}
+		if (B->key = i) {
+			return pos;
+		}
+		int left = search_hier(B->left,i,2*pos);
+		if (left) {
+			return left;
+		}
+		return search_hier(B->right, i, 2 * pos + 1);;
 	}
 }
 

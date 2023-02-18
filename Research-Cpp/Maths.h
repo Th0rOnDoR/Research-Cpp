@@ -24,18 +24,22 @@ namespace ResearchCpp {
 	};
 	template <typename type>
 	struct List {
-		Element<type> head;
-		List() : head(Element<type>()) {}
-		List(Element<type> head) : head(head){}
-		Append(Element<type> toadd) {
+		Element<type>* head;
+		List() : head(nullptr) { }
+		List(Element<type> head) : head(head) {}
+		void Append(Element<type> toadd) {
 			if (!head) {
-				head = toadd;
+				head = &toadd;
 			}
 			Element<type> tmp = head;
 			while (tmp.next) {
 				tmp = tmp.next;
 			}
-			tmp.next = toadd;
+			tmp.next = &toadd;
+		}
+
+		List operator+(const List other) {
+
 		}
 	};
 	template <typename type1, typename type2>

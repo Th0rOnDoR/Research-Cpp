@@ -1,5 +1,7 @@
 #pragma once
 #include <cstddef>
+#include "Maths.h";
+
 namespace ResearchCpp {
 	
 	class TreeNode {
@@ -24,12 +26,10 @@ namespace ResearchCpp {
 			this->left = left;
 			this->right = right;
 		}
-
 		int Size();
 		bool IsSymmetric();
 		int Deep();
-		List<Couple<int,int>> toList();
-
+		List<Couple<int,int>> ToList(int p = 0);
 
 
 
