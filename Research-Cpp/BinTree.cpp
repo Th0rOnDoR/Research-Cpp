@@ -1,14 +1,14 @@
-#include "Trees.h";
+#include "Trees.h"
 #include <functional>
 #include "Maths.h"
-#include <string>;
-#include <queue>;
-#include "numbers.cpp";
+#include <string>
+#include <queue>
+#include "numbers.cpp"
 
 namespace ResearchCpp {
 	
  
-	bool _IsSymmetric(TreeNode* r, TreeNode* l) {
+	bool _IsSymmetric(BinTreeNode* r, BinTreeNode* l) {
 		if (!r && !l) {
 			return true;
 		}
@@ -21,7 +21,7 @@ namespace ResearchCpp {
 		return false;
 	} 
 		
-	int TreeNode::Deep() {
+	int BinTreeNode::Deep() {
 		if (!this) {
 			return 0;
 		}
@@ -30,7 +30,7 @@ namespace ResearchCpp {
 		}
 	}
 
-	int TreeNode::Size() {
+	int BinTreeNode::Size() {
 		if (!this) {
 			return 0;
 		}
@@ -39,13 +39,13 @@ namespace ResearchCpp {
 		}
 	}
 
-	bool TreeNode::IsSymmetric() {
+	bool BinTreeNode::IsSymmetric() {
 		if (!this) {
 			return true;
 		}
 		return _IsSymmetric(this->right, this->left);
 	}
-	List<Couple<int, int>> TreeNode::ToList(int p) {
+	List<Couple<int, int>> BinTreeNode::ToList(int p) {
 		if (!this) {
 			return List<Couple<int, int>>();
 		}
@@ -54,15 +54,15 @@ namespace ResearchCpp {
 
 	}
 	
-	List<int> get_average(TreeNode* B) {
+	List<int> get_average(BinTreeNode* B) {
 		List<int> result;
 		if (B) {
-			std::queue<TreeNode*> q;
-			std::queue<TreeNode*> q2;
+			std::queue<BinTreeNode*> q;
+			std::queue<BinTreeNode*> q2;
 			q.push(B);
 			int sum = 0;
 			int counter = 0;
-			TreeNode tmp;
+			BinTreeNode tmp;
 			while (!q.empty()) {
 				tmp = *q.front();
 				sum += B->key;
@@ -85,7 +85,7 @@ namespace ResearchCpp {
 		return result;
 	}
 	
-	int search_hier(TreeNode* B, int i, int pos = 0) {
+	int search_hier(BinTreeNode* B, int i, int pos = 0) {
 		if (!B) {
 			return NULL;
 		}

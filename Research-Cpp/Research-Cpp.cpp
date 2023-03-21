@@ -1,8 +1,7 @@
 #include <iostream>
-#include "Maths.h";
-#include "Trees.h";
-#include "Test.h";
-
+#include "Maths.h"
+#include "Trees.h"
+#include "Test.h"
 #include <iostream>
 #include <fstream>
 using namespace std;

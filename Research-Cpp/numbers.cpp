@@ -1,4 +1,4 @@
-#include "Maths.h";
+#include "Maths.h"
 #include <functional>
 
 namespace ResearchCpp {
