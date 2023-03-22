@@ -32,7 +32,6 @@ namespace ResearchCpp {
 		List<Couple<int,int>> ToList(int p = 0); 
 	};
 
-
 	template<typename T>
 	struct Queue
 	{

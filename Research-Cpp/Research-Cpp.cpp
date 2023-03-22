@@ -9,6 +9,12 @@ using namespace ResearchCpp;
 
 
 
+void append(std::vector<int>* a, int b) {
+	while (b >= a->size() + 1) {
+		a->resize(b);
+	}
+}
+
 
 double f(double x) { return x; }
 int main()
@@ -18,16 +24,12 @@ int main()
 	if (!NULL) { //this, is true.
 		std::cout << "Hello World!\n";
 	}
-	ofstream myfile;
-	myfile.open("example.txt");
-	for (int i = 0; i < 100000; i++) {
-		myfile << "Writing this to a file.\n";
-		myfile << "Writing this to a file.\n";
-		myfile << "Writing this to a file.\n";
-		myfile << "Writing this to a file.\n";
-		myfile << "Writing this to a file.\n";
-		myfile << "Writing this to a file.\n";
-	}
-	myfile.close();
-	return 0;
+	int aaa = 1;
+	int aa1 = 2;
+	int aa2 = 3;
+	int aa3 = 5;
+	int aa5 = 7;
+	std::vector<int*> vect = { nullptr,&aaa,&aa1,&aa2, nullptr,&aa3, nullptr, &aa5 };
+	//append(&vect,10);
+	
 }

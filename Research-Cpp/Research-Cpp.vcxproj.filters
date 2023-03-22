@@ -21,7 +21,7 @@
     <ClCompile Include="Integrals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Symmetric Tree.cpp">
+    <ClCompile Include="BinTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="numbers.cpp">

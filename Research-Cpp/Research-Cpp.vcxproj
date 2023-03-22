@@ -130,7 +130,7 @@
     <ClCompile Include="Research-Cpp.cpp" />
     <ClCompile Include="Integrals.cpp" />
     <ClCompile Include="numbers.cpp" />
-    <ClCompile Include="Symmetric Tree.cpp" />
+    <ClCompile Include="BinTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Trees.h" />

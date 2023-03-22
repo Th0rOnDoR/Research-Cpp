@@ -45,6 +45,7 @@ namespace ResearchCpp {
 		}
 		return _IsSymmetric(this->right, this->left);
 	}
+	/*
 	List<Couple<int, int>> BinTreeNode::ToList(int p) {
 		if (!this) {
 			return List<Couple<int, int>>();
@@ -53,7 +54,7 @@ namespace ResearchCpp {
 		
 
 	}
-	
+	*/
 	List<int> get_average(BinTreeNode* B) {
 		List<int> result;
 		if (B) {
