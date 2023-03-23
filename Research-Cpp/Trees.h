@@ -31,6 +31,18 @@ namespace ResearchCpp {
 		int Deep();
 		List<Couple<int,int>> ToList(int p = 0); 
 	};
+	struct BinTreeNodeSize {
+		int key;
+		BinTreeNodeSize* left;
+		BinTreeNodeSize* right;
+		int size;
+		BinTreeNodeSize(int key, BinTreeNodeSize* left, BinTreeNodeSize* right, int size) {
+			this->key = key;
+			this->left = left;
+			this->right = right;
+			this->size = size;
+		}
+	};
 
 	template<typename T>
 	struct Queue
@@ -69,4 +81,6 @@ namespace ResearchCpp {
 		}
 
 	};
+	BinTreeNodeSize* ListToBinSize(std::vector<int*>*, int i = 1);
+	std::vector<int*> BinToVect(BinTreeNodeSize*);
 }

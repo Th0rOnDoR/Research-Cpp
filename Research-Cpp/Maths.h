@@ -58,4 +58,5 @@ namespace ResearchCpp {
 	
 	//numbers.cpp for already implemented types
 	static bool max(int, int);
+	static int exposant(int, int);
 }

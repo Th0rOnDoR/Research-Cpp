@@ -31,5 +31,6 @@ int main()
 	int aa5 = 7;
 	std::vector<int*> vect = { nullptr,&aaa,&aa1,&aa2, nullptr,&aa3, nullptr, &aa5 };
 	//append(&vect,10);
+	BinTreeNodeSize* t = ListToBinSize(&vect);
 	
 }

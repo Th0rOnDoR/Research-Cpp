@@ -45,16 +45,6 @@ namespace ResearchCpp {
 		}
 		return _IsSymmetric(this->right, this->left);
 	}
-	/*
-	List<Couple<int, int>> BinTreeNode::ToList(int p) {
-		if (!this) {
-			return List<Couple<int, int>>();
-		}
-		else {}
-		
-
-	}
-	*/
 	List<int> get_average(BinTreeNode* B) {
 		List<int> result;
 		if (B) {
@@ -99,5 +89,70 @@ namespace ResearchCpp {
 		}
 		return search_hier(B->right, i, 2 * pos + 1);;
 	}
-}
 
+	BinTreeNodeSize __Copy(BinTreeNodeSize c) {
+		BinTreeNodeSize result = BinTreeNodeSize(c.key, nullptr, nullptr, 1);
+		if (c.left) {
+			BinTreeNodeSize left = __Copy(*c.left);
+			result.left = &left;
+			result.size += left.size;
+		}
+		if (c.right) {
+			BinTreeNodeSize right = __Copy(*c.right);
+			result.right = &right;
+			result.size += right.size;
+		}
+		return result;
+	}
+
+	BinTreeNodeSize* ListToBinSize(std::vector<int*>* a, int i) {
+		if (i >= a->size() || (*a)[i] == nullptr) {
+			return nullptr;
+		}
+		else {
+			BinTreeNodeSize* l = ListToBinSize(a, i * 2);
+			BinTreeNodeSize main = BinTreeNodeSize(*((*a)[i]), nullptr, nullptr, 1);
+			if (l) {
+				BinTreeNodeSize k = __Copy(*l);
+				main.left = &k;
+				main.size += k.size;
+			}
+			BinTreeNodeSize* r = ListToBinSize(a, i * 2 + 1);
+			if (r) {
+				main.right = r;
+				main.size += r->size;
+			}
+			return &main;
+		}
+	}
+
+	int __GetTreeHeight(BinTreeNodeSize* r) {
+		if (!r) {
+			return -1;
+		}
+		else {
+			return 1 + max(__GetTreeHeight(r->left), __GetTreeHeight(r->right));
+		}
+	}
+
+	void __recBinToVect(BinTreeNodeSize* r, int i, std::vector<int*>* a) {
+		if (!r) {
+			return;
+		}
+		std::vector<int*> t = *a;
+		int key = r->key;
+		t[i] = &(key);
+		__recBinToVect(r->left, i * 2, a);
+		__recBinToVect(r->right, i * 2 + 1, a);
+	}
+
+	std::vector<int*> BinToVect(BinTreeNodeSize* r) {
+		int height = __GetTreeHeight(r);
+		std::vector<int*> result = std::vector<int*>(exposant(2,height));
+		for (int i = 0; i < exposant(2, height); i++) {
+			result[i] = nullptr;
+		}
+		__recBinToVect(r, 1, &result);
+		return result;
+	}
+}
